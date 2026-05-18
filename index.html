@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>QuizFlix PRO</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+<div id="statsScreen" class="screen"></div>
+<div id="aboutScreen" class="screen"></div>
+<div id="subjectScreen" class="screen"></div>
+<div id="choiceScreen" class="screen"></div>
+
+
+<div id="loginScreen" class="screen active">
+
+  <div class="login-bg"></div>
+
+  <div class="login-container">
+
+    <h1 class="logo">QUIZ<span>FLIX</span></h1>
+    <p class="tagline"> • Play like a game</p>
+
+    <input id="username" placeholder="Enter your name" autocomplete="off">
+
+    <button onclick="startApp()">Start Quiz</button>
+
+  </div>
+
+</div>
+
+
+<div id="homeScreen" class="screen">
+
+  
+  <div class="navbar">
+
+    <div class="logo-small">QUIZFLIX</div>
+
+    <div class="nav-links">
+
+      <span onclick="goHome()">Home</span>
+      <span onclick="showAbout()">About</span>
+      <span onclick="showMyStats()">Stats</span>
+
+      
+      <button onclick="logout()" class="logout-btn">Logout</button>
+
+    </div>
+
+  </div>
+
+
+  <div class="hero">
+    <h2>Unlimited Quizzes</h2>
+    <p>Choose your subject like Netflix shows</p>
+  </div>
+
+  <h3 class="row-title">🔥 Trending</h3>
+  <div class="row" id="trending"></div>
+
+  <h3 class="row-title">⭐ Popular</h3>
+  <div class="row" id="popular"></div>
+
+  <h3 class="row-title">🎯 Recommended</h3>
+  <div class="row" id="recommended"></div>
+
+  <h3 class="row-title">🆕 New</h3>
+  <div class="row" id="new"></div>
+
+</div>
+
+
+<div id="quizScreen" class="screen">
+
+  <div class="quiz-top">
+
+    <button onclick="goHome()">← Back</button>
+
+    <h2 id="quizTitle">Quiz</h2>
+
+    <div class="quiz-meta">
+      <span id="qNumber">Q1/10</span>
+      <div id="timer">10</div>
+    </div>
+
+  </div>
+
+  <div class="progress">
+    <div id="progressBar"></div>
+  </div>
+
+  <div id="questionBox">Question will appear here</div>
+
+  <div id="options"></div>
+
+  <button id="skipBtn" onclick="skipQuestion()">
+    Skip Question ⏭
+  </button>
+
+</div>
+
+
+<div id="resultScreen" class="screen">
+
+  <div class="hero">
+
+    <h2>Quiz Completed 🎉</h2>
+
+    <p id="finalScore">Score: 0</p>
+    <p id="finalStats"></p>
+
+    <button onclick="goHome()">Back Home</button>
+
+  </div>
+
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
